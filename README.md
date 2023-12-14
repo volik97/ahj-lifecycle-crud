@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/gd2bxt7wrt44tv5a?svg=true)](https://ci.appveyor.com/project/volik97/ahj-lifecycle-crud)

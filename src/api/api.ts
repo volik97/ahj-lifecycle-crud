@@ -1,0 +1,4 @@
+export const downloadData = (setData: (data: {id: number, content: string}[]) => void) => {fetch('http://localhost:7070/notes').then(response => {return response.json()}).then(data => setData(data))}
+export const uploadData = (formData:{id: number, content: string}) => fetch('http://localhost:7070/notes', {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData)})
+
+export const deleteData = (id: number, setdata: (data: {id: number, content: string}[]) => void)  => fetch(`http://localhost:7070/notes/${id}`, {method: 'DELETE'}).then(() => downloadData(setdata))
