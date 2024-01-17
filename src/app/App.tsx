@@ -5,8 +5,9 @@ import Form from "../component/Form.tsx";
 function App() {
   const [data, setData] = useState<{id:number, content:string}[]|null>()
   useEffect(()=>{
-    downloadData(setData)
-  }, [data])
+    downloadData(setData);
+      return
+  }, [])
   return (data ?
     <div className={'flex flex-col p-20 gap-10'}>
       <div className={'flex flex-row gap-10'}>
